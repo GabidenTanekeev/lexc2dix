@@ -122,7 +122,7 @@ class DixGenerator(object):
 
     def all_module_merger(self, filename):
         """The module to join all the generated sections to yeild the final dix file"""
-        dix_file = [self.sdef_module, self.pardef_module, self.section_module]
+        dix_file = [self.section_module]
         separator = '\n'
         dix_file = separator.join(dix_file)
         with open(filename, 'w+') as d_file:
